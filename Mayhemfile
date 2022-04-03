@@ -1,0 +1,20 @@
+image: bojuns/srs:latest
+
+duration: 90
+
+project: srs
+target: srs
+
+advanced_triage: true
+
+tasks:
+  - name: exploitability_factors
+  - name: regression_testing
+  - name: behavior_testing
+  - name: coverage_analysis
+
+cmds:
+  - cmd: ./trunk/objs/srs -c trunk/conf/srs.conf
+    network:
+      url: rtmp://localhost/live/livestream
+      timeout: 2
